@@ -1,0 +1,25 @@
+{
+    "name": "ChusliProtection",
+    "version": "1.0",
+    "manifest_version": 2,
+
+    "description": "Cyber Bullying Detector",
+    "icons": {
+        "128": "emoji.png"
+    },
+
+    "content_scripts":[
+        {
+           "matches": ["<all_urls>"],
+           "js": ["content.js"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "CyberBullying"
+    },
+
+    "permissions": [
+        "http://*/*", "https://*/*"
+    ]
+}
